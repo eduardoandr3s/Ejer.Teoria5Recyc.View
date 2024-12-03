@@ -172,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
     @Override  //recupera los datos
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        listaCompra.clear();
         listaCompra.addAll((ArrayList<ProductoModel>)
                 savedInstanceState.getSerializable("LISTA"));
         adapter.notifyItemRangeInserted(0, listaCompra.size());
